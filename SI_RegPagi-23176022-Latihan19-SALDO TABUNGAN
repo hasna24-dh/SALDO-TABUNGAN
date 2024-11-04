@@ -1,0 +1,46 @@
+/*
+
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+*/
+package LATIHAN;
+import java.util.Scanner;
+/**
+*
+
+@author hp5cd
+NAMA: Hasna Durrotul Hikmah
+KELAS: PBO1
+NIM: 23176022
+PRODI: Sistem Informasi
+SEMESTER: 3
+Deskripsi Program: SALDO TABUNGAN
+*/
+public class latihan19 {
+
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    // Meminta input dari pengguna
+    System.out.print("Masukkan saldo awal: Rp. ");
+    double saldoAwal = input.nextDouble();
+
+    System.out.print("Masukkan bunga per bulan (%): ");
+    double bunga = input.nextDouble() / 100;
+
+    System.out.print("Masukkan lama menabung (bulan): ");
+    int lamaBulan = input.nextInt();
+
+    System.out.println("\nrun:");
+
+    // Loop untuk setiap bulan
+    for (int bulan = 1; bulan <= lamaBulan; bulan++) {
+        saldoAwal += saldoAwal * bunga;
+        System.out.printf("Saldo di bulan ke-%d Rp. %,.0f%n", bulan, saldoAwal);
+    }
+
+    System.out.println("BUILD SUCCESSFUL (total time: 0 seconds)");
+    
+    input.close();
+}
+}
